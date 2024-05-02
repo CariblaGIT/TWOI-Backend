@@ -73,8 +73,16 @@ export const updateCharacterById = async (req, res) => {
 }
 
 export const deleteCharacterById = async (req, res) => {
-    return res.status(200).json({
-        success: true,
-        message: "Characters deleted succesfully"
-    })
+    try {
+        const characterId = req.params.id
+
+        await Character.deleteOne({ _id: characterId })
+
+        return res.status(200).json({
+            success: true,
+            message: "Characters deleted succesfully"
+        });
+    } catch (error) {
+        console.log(error.message)
+    }
 }
