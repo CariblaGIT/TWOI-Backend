@@ -1,13 +1,14 @@
-import Character from "./Character.js";
+import Character from "./Character.js"
 
 export const getAllCharacters = async (req, res) => {
     try {
         const characters = await Character.find({});
+
         return res.status(200).json({
             success: true,
             message: "Characters retrieved succesfully",
             data: characters
-        })
+        });
     } catch (error) {
         console.log(error.message);
     }
@@ -68,21 +69,21 @@ export const updateCharacterById = async (req, res) => {
             data: characterToUpdate
         });
     } catch (error) {
-        console.log(error.message)
+        console.log(error.message);
     }
 }
 
 export const deleteCharacterById = async (req, res) => {
     try {
-        const characterId = req.params.id
+        const characterId = req.params.id;
 
-        await Character.deleteOne({ _id: characterId })
+        await Character.deleteOne({ _id: characterId });
 
         return res.status(200).json({
             success: true,
             message: "Characters deleted succesfully"
         });
     } catch (error) {
-        console.log(error.message)
+        console.log(error.message);
     }
 }
