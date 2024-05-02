@@ -1,5 +1,6 @@
-import publicRouter from './public_router.js'
-import { Router } from "express";
+import { Router } from "express"
+import userRouter from './entities/user/router.js'
+import publicRouter from './database/public_router.js'
 
 const router = Router();
 
@@ -12,5 +13,6 @@ router.get('/healthy', (req, res) => {
 })
 
 router.use('/public', publicRouter);
+router.use('/users', userRouter);
 
 export default router;
