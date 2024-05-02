@@ -38,10 +38,38 @@ export const postCharacter = async (req, res) => {
 }
 
 export const updateCharacterById = async (req, res) => {
-    return res.status(200).json({
-        success: true,
-        message: "Characters updated succesfully"
-    })
+    try {
+        const { name, image, unlock } = req.body;
+        const characterId = req.params.id;
+
+        if(!name && !image && !unlock){
+            throw new Error ("No provided data to update a character");
+        }
+
+        const characterToUpdate = await Character.findById(characterId);
+
+        if(name){
+            characterToUpdate.name = name;
+        }
+
+        if(image){
+            characterToUpdate.image = image;
+        }
+
+        if(unlock){
+            characterToUpdate.unlock = unlock;
+        }
+
+        characterToUpdate.save();
+
+        return res.status(200).json({
+            success: true,
+            message: "Characters updated succesfully",
+            data: characterToUpdate
+        });
+    } catch (error) {
+        console.log(error.message)
+    }
 }
 
 export const deleteCharacterById = async (req, res) => {
