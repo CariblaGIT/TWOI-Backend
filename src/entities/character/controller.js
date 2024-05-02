@@ -1,8 +1,11 @@
+import Character from "./Character";
 
 export const getAllCharacters = async (req, res) => {
+    const characters = await Character.find({});
     return res.status(200).json({
         success: true,
-        message: "Characters retrieved succesfully"
+        message: "Characters retrieved succesfully",
+        data: characters
     })
 }
 
