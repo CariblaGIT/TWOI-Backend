@@ -1,5 +1,5 @@
 import { Router } from "express"
-import { deleteUserById, getProfile, getUserAchievemnts, getUserCharacters, getUserMarks, getUsers, giveOrRemoveAchievement, giveOrRemoveCharacter, giveOrRemoveMark, modifyProfile } from "../entities/user/controller.js"
+import { deleteUserById, getProfile, getUserAchievemnts, getUserCharacters, getUserMarks, getUsers, giveOrRemoveAchievement, giveOrRemoveCharacter, giveOrRemoveMark, modifyProfile, suspendUser } from "../entities/user/controller.js"
 
 const router = Router();
 
