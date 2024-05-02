@@ -1,5 +1,6 @@
 import { Router } from "express"
 import userRouter from './entities/user/router.js'
+import characterRouter from './entities/character/router.js'
 import publicRouter from './database/public_router.js'
 
 const router = Router();
@@ -14,5 +15,6 @@ router.get('/healthy', (req, res) => {
 
 router.use('/public', publicRouter);
 router.use('/users', userRouter);
+router.use('/characters', characterRouter);
 
 export default router;
