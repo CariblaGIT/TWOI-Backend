@@ -1,6 +1,6 @@
 import { Router } from "express"
-import userRouter from './user_router.js'
-import publicRouter from './public_router.js'
+import userRouter from './entities/user/router.js'
+import publicRouter from './database/public_router.js'
 
 const router = Router();
 
