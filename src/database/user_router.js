@@ -12,6 +12,7 @@ router.put('/profile', modifyProfile);
 router.put('/mark/:id', giveOrRemoveMark);
 router.put('/achievement/:id', giveOrRemoveAchievement);
 router.put('/character/:id', giveOrRemoveCharacter);
+router.put('/:id/suspend', suspendUser);
 router.delete('/:id', deleteUserById);
 
 export default router;

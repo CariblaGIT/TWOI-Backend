@@ -4,7 +4,8 @@ const UserSchema = new Schema(
     {
         username: {
             type: String,
-            required: false
+            required: false,
+            unique: true
         },
         email: {
             type: String,
@@ -35,7 +36,11 @@ const UserSchema = new Schema(
         marks:[{
             type: Schema.Types.ObjectId,
             ref: 'Mark'
-        }]
+        }],
+        is_active: {
+            type: Boolean,
+            default: false
+        }
     },
     {
         timestamps: true,

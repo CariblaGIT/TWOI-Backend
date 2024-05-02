@@ -62,6 +62,13 @@ export const giveOrRemoveCharacter = async (req, res) => {
     })
 }
 
+export const suspendUser = async (req, res) => {
+    return res.status(200).json({
+        success: true,
+        message: "User suspended or activated succesfully"
+    })
+}
+
 export const deleteUserById = async (req, res) => {
     return res.status(200).json({
         success: true,
