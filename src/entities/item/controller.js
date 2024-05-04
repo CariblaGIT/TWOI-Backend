@@ -15,11 +15,29 @@ export const getAllItems = async (req, res) => {
 }
 
 export const postItem = async (req, res) => {
-    return res.status(200).json({
-        success: true,
-        message: "Item posted succesfully",
-        //data: newItem
-    });
+    try {
+        const { name, quote, description, type, icon } = req.body;
+
+        if(!name || !quote || !description || !type || !icon){
+            throw new Error ("No provided correct data for post a character");
+        }
+
+        const newItem = await Item.create({
+            name,
+            quote,
+            description,
+            type,
+            icon
+        });
+        
+        return res.status(200).json({
+            success: true,
+            message: "Item posted succesfully",
+            data: newItem
+        });
+    } catch (error) {
+        console.log(error.message);
+    }
 }
 
 export const updateItemById = async (req, res) => {
