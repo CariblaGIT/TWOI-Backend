@@ -84,8 +84,16 @@ export const updateItemById = async (req, res) => {
 }
 
 export const deleteItemById = async (req, res) => {
-    return res.status(200).json({
-        success: true,
-        message: "Item deleted succesfully"
-    });
+    try {
+        const itemId = req.params.id;
+
+        await Item.deleteOne({ _id: itemId });
+
+        return res.status(200).json({
+            success: true,
+            message: "Item deleted succesfully"
+        });
+    } catch (error) {
+        console.log(error.message);
+    }
 }
