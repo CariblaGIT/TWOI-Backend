@@ -1,10 +1,17 @@
+import Item from "./Item"
 
 export const getAllItems = async (req, res) => {
-    return res.status(200).json({
-        success: true,
-        message: "Items retrieved succesfully",
-        //data: items
-    });
+    try {
+        const items = await Item.find({});
+
+        return res.status(200).json({
+            success: true,
+            message: "Items retrieved succesfully",
+            data: items
+        });
+    } catch (error) {
+        console.log(error.message);
+    }
 }
 
 export const postItem = async (req, res) => {
