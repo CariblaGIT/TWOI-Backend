@@ -4,7 +4,24 @@ const ItemSchema = new Schema(
     {
         name: {
             type: String,
+            unique: true
+        },
+        quote: {
+            type: String,
+            unique: true,
             required: false
+        },
+        description: {
+            type: String,
+            unique: true
+        },
+        type: {
+            type: String,
+            enum: ["active", "pasive"]
+        },
+        icon: {
+            type: String,
+            unique: true
         }
     },
     {
