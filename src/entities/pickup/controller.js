@@ -1,9 +1,17 @@
+import Pickup from "./Pickup.js"
+
 export const getAllPickups = async (req, res) => {
-    return res.status(200).json({
-        success: true,
-        message: "Pickups retrieved succesfully",
-        //data: pickups
-    });
+    try {
+        const pickups = await Pickup.find({});
+
+        return res.status(200).json({
+            success: true,
+            message: "Pickups retrieved succesfully",
+            data: pickups
+        });
+    } catch (error) {
+        console.log(error.message);
+    }
 }
 
 export const getAllPickupsFromType = async (req, res) => {
