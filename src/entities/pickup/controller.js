@@ -31,11 +31,28 @@ export const getAllPickupsFromType = async (req, res) => {
 }
 
 export const postPickup = async (req, res) => {
-    return res.status(201).json({
-        success: true,
-        message: "Pickup posted succesfully",
-        //data: pickup
-    });
+    try {
+        const { name, description, type, icon } = req.body;
+
+        if(!name || !description || !type || !icon){
+            throw new Error ("No provided correct data for post a pickup");
+        }
+
+        const newPickup = await Pickup.create({
+            name,
+            description,
+            type,
+            icon
+        });
+        
+        return res.status(200).json({
+            success: true,
+            message: "Pickup posted succesfully",
+            data: newPickup
+        });
+    } catch (error) {
+        console.log(error.message);
+    }
 }
 
 export const updatePickupById = async (req, res) => {

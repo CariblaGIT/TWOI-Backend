@@ -19,7 +19,7 @@ export const postItem = async (req, res) => {
         const { name, quote, description, type, icon } = req.body;
 
         if(!name || !quote || !description || !type || !icon){
-            throw new Error ("No provided correct data for post a character");
+            throw new Error ("No provided correct data for post a item");
         }
 
         const newItem = await Item.create({
