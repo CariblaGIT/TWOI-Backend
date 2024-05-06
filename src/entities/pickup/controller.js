@@ -95,8 +95,16 @@ export const updatePickupById = async (req, res) => {
 }
 
 export const deletePickupById = async (req, res) => {
-    return res.status(200).json({
-        success: true,
-        message: "Pickup deleted succesfully"
-    });
+    try {
+        const pickupId = req.params.id;
+
+        await Pickup.deleteOne({ _id: pickupId });
+
+        return res.status(200).json({
+            success: true,
+            message: "Pickup deleted succesfully"
+        });
+    } catch (error) {
+        console.log(error.message);
+    }
 }
