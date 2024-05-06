@@ -56,11 +56,42 @@ export const postPickup = async (req, res) => {
 }
 
 export const updatePickupById = async (req, res) => {
-    return res.status(200).json({
-        success: true,
-        message: "Pickup updated succesfully",
-        //data: pickup
-    });
+    try {
+        const { name, description, type, icon } = req.body;
+        const pickupId = req.params.id;
+
+        if(!name && !description && !type && !icon){
+            throw new Error ("No provided data to update a pickup");
+        }
+
+        const pickupToUpdate = await Pickup.findById(pickupId);
+
+        if(name){
+            pickupToUpdate.name = name;
+        }
+
+        if(description){
+            pickupToUpdate.description = description;
+        }
+
+        if(type){
+            pickupToUpdate.type = type;
+        }
+
+        if(icon){
+            pickupToUpdate.icon = icon;
+        }
+
+        pickupToUpdate.save();
+
+        return res.status(200).json({
+            success: true,
+            message: "Pickup updated succesfully",
+            data: pickupToUpdate
+        });
+    } catch (error) {
+        console.log(error.message);
+    }
 }
 
 export const deletePickupById = async (req, res) => {
