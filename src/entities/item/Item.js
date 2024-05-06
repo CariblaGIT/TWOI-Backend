@@ -7,8 +7,7 @@ const ItemSchema = new Schema(
             unique: true
         },
         quote: {
-            type: String,
-            unique: true
+            type: String
         },
         description: {
             type: String,
