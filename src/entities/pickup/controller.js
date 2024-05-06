@@ -15,11 +15,19 @@ export const getAllPickups = async (req, res) => {
 }
 
 export const getAllPickupsFromType = async (req, res) => {
-    return res.status(200).json({
-        success: true,
-        message: "Pickups retrieved succesfully",
-        //data: pickups
-    });
+    try {
+        const type = req.params.type;
+
+        const pickups = await Pickup.find({type: type});
+
+        return res.status(200).json({
+            success: true,
+            message: `Pickups from type ${type} retrieved succesfully`,
+            data: pickups
+        });
+    } catch (error) {
+        console.log(error.message);
+    }
 }
 
 export const postPickup = async (req, res) => {
