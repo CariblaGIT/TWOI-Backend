@@ -3,6 +3,7 @@ import userRouter from './entities/user/router.js'
 import characterRouter from './entities/character/router.js'
 import itemRouter from './entities/item/router.js'
 import pickupRouter from './entities/pickup/router.js'
+import achievementRouter from './entities/achievement/router.js'
 import publicRouter from './database/public_router.js'
 
 const router = Router();
@@ -20,5 +21,6 @@ router.use('/users', userRouter);
 router.use('/characters', characterRouter);
 router.use('/items', itemRouter);
 router.use('/pickups', pickupRouter);
+router.use('/achievements', achievementRouter);
 
 export default router;
