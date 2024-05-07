@@ -1,11 +1,17 @@
 import Achievement from "./Achievement.js"
 
 export const getAllAchievements = async (req, res) => {
-    return res.status(200).json({
-        success: true,
-        message: "Achievements retrieved succesfully",
-        // data: achievements
-    });
+    try {
+        const achievements = await Achievement.find({});
+
+        return res.status(200).json({
+            success: true,
+            message: "Achievements retrieved succesfully",
+            data: achievements
+        });
+    } catch (error) {
+        console.log(error.message);
+    }
 }
 
 export const postAchievement = async (req, res) => {
