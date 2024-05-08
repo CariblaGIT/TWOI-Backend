@@ -2,9 +2,15 @@ import { Schema, model } from "mongoose";
 
 const MarkSchema = new Schema(
     {
-        name: {
+        image: {
             type: String,
-            required: false
+            unique: true
+        },
+        character_id: {
+            type: String
+        },
+        achievement_id: {
+            type: String
         }
     },
     {
