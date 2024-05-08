@@ -54,11 +54,54 @@ export const postAchievement = async (req, res) => {
 }
 
 export const updateAchievementById = async (req, res) => {
-    return res.status(200).json({
-        success: true,
-        message: "Achievement updated succesfully",
-        // data: achievements
-    });
+    try {
+        const { name, description, how_to, image, character_id, item_id, pickup_id } = req.body;
+        const achievementId = req.params.id;
+
+        if(!name && !description && !how_to && !image && !character_id && !item_id && !pickup_id){
+            throw new Error ("No provided data to update a pickup");
+        }
+
+        const achievementToUpdate = await Achievement.findById(achievementId);
+
+        if(name){
+            achievementToUpdate.name = name;
+        }
+
+        if(description){
+            achievementToUpdate.description = description;
+        }
+
+        if(how_to){
+            achievementToUpdate.how_to = how_to;
+        }
+
+        if(image){
+            achievementToUpdate.image = image;
+        }
+
+        if(character_id){
+            achievementToUpdate.character_id = character_id;
+        }
+
+        if(item_id){
+            achievementToUpdate.item_id = item_id;
+        }
+
+        if(pickup_id){
+            achievementToUpdate.pickup_id = pickup_id;
+        }
+
+        achievementToUpdate.save();
+
+        return res.status(200).json({
+            success: true,
+            message: "Achievement updated succesfully",
+            data: achievementToUpdate
+        });
+    } catch (error) {
+        console.log(error.message);
+    }
 }
 
 export const deleteAchievementById = async (req, res) => {
