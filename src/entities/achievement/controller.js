@@ -105,8 +105,16 @@ export const updateAchievementById = async (req, res) => {
 }
 
 export const deleteAchievementById = async (req, res) => {
-    return res.status(200).json({
-        success: true,
-        message: "Achievement deleted succesfully"
-    });
+    try {
+        const achievementId = req.params.id;
+
+        await Achievement.deleteOne({ _id: achievementId });
+
+        return res.status(200).json({
+            success: true,
+            message: "Achievement deleted succesfully"
+        });
+    } catch (error) {
+        console.log(error.message);
+    }
 }
