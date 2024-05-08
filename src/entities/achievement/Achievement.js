@@ -4,7 +4,30 @@ const AchievementSchema = new Schema(
     {
         name: {
             type: String,
-            required: false
+            unique: true
+        },
+        description: {
+            type: String
+        },
+        how_to: {
+            type: String,
+            unique: true
+        },
+        image: {
+            type: String,
+            unique: true
+        },
+        character_id: {
+            type: String,
+            default: null
+        },
+        item_id: {
+            type: String,
+            default: null
+        },
+        pickup_id: {
+            type: String,
+            default: null
         }
     },
     {
