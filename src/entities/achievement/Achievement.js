@@ -7,8 +7,7 @@ const AchievementSchema = new Schema(
             unique: true
         },
         description: {
-            type: String,
-            unique: true
+            type: String
         },
         how_to: {
             type: String,

@@ -19,13 +19,13 @@ export const postAchievement = async (req, res) => {
         const { name, description, how_to, image, character_id, item_id, pickup_id } = req.body;
 
         if(!name || !description || !how_to || !image){
-            throw new Error ("No provided correct data for post a pickup");
+            throw new Error ("No provided correct data for post an achievement");
         }
 
         const newAchievementItems = {
             name,
             description,
-            type,
+            how_to,
             image
         };
 
