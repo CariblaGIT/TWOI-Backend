@@ -59,7 +59,7 @@ export const updateAchievementById = async (req, res) => {
         const achievementId = req.params.id;
 
         if(!name && !description && !how_to && !image && !character_id && !item_id && !pickup_id){
-            throw new Error ("No provided data to update a pickup");
+            throw new Error ("No provided data to update an achievement");
         }
 
         const achievementToUpdate = await Achievement.findById(achievementId);
