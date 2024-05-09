@@ -1,5 +1,6 @@
 import { Router } from "express"
 import userRouter from './entities/user/router.js'
+import authRouter from './entities/auth/router.js'
 import characterRouter from './entities/character/router.js'
 import itemRouter from './entities/item/router.js'
 import pickupRouter from './entities/pickup/router.js'
@@ -18,6 +19,7 @@ router.get('/healthy', (req, res) => {
 })
 
 router.use('/public', publicRouter);
+router.use('/auth', authRouter);
 router.use('/users', userRouter);
 router.use('/characters', characterRouter);
 router.use('/items', itemRouter);
