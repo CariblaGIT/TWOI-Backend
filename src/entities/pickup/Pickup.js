@@ -4,7 +4,19 @@ const PickupSchema = new Schema(
     {
         name: {
             type: String,
-            required: false
+            unique: true
+        },
+        description: {
+            type: String,
+            unique: true
+        },
+        type: {
+            type: String,
+            enum: ["card", "heart", "trinket", "coin", "bomb", "key", "battery", "pill", "rune", "sack"]
+        },
+        icon: {
+            type: String,
+            unique: true
         }
     },
     {

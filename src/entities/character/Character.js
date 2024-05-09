@@ -4,7 +4,15 @@ const CharacterSchema = new Schema(
     {
         name: {
             type: String,
-            required: false
+            unique: true
+        },
+        image: {
+            type: String,
+            unique: true
+        },
+        unlock: {
+            type: String,
+            unique: true
         }
     },
     {
