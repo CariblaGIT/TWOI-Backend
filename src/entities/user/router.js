@@ -5,14 +5,14 @@ const router = Router();
 
 router.get('/', getUsers);
 router.get('/profile', getProfile);
-router.get('/:id/marks', getUserMarks);
-router.get('/:id/achievements', getUserAchievemnts);
-router.get('/:id/characters', getUserCharacters);
+router.get('/marks', getUserMarks);
+router.get('/achievements', getUserAchievemnts);
+router.get('/characters', getUserCharacters);
 router.put('/profile', modifyProfile);
 router.put('/mark/:id', giveOrRemoveMark);
 router.put('/achievement/:id', giveOrRemoveAchievement);
 router.put('/character/:id', giveOrRemoveCharacter);
-router.put('/:id/suspend', suspendUser);
+router.put('/suspend', suspendUser);
 router.delete('/:id', deleteUserById);
 
 export default router;
