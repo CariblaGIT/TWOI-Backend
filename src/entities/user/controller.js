@@ -1,4 +1,4 @@
-import User from "./User"
+import User from "./User.js"
 import { verifyEmail } from "../../core/utils/verifyEmail.js"
 import { verifyPassword } from "../../core/utils/verifyPassword.js"
 
