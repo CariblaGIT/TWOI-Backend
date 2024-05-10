@@ -99,7 +99,7 @@ export const seederDefaultAchievements = async () => {
                 name: "Meat Claver",
                 description: "Complete the Corpse with Isaac",
                 how_to: "Defeat Mother as Isaac",
-                image: "dinfinity.png",
+                image: "meatclaver.png",
                 character_id: "6634aa90e5fc477b76acb847",
                 _id: new mongoose.Types.ObjectId("6634aa90e5fc477b76acb89e")
             },

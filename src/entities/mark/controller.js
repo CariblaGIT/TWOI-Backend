@@ -16,7 +16,7 @@ export const getAllMarks = async (req, res) => {
 
 export const postMark = async (req, res) => {
     try {
-        const { image, character_id, achievement_id } = req.body;
+        const { image, achievement_id } = req.body;
 
         if(!image || !character_id || !achievement_id){
             throw new Error ("No provided correct data for post a mark");
@@ -24,7 +24,6 @@ export const postMark = async (req, res) => {
 
         const newMark = await Mark.create({
             image,
-            character_id,
             achievement_id
         });
         
@@ -40,7 +39,7 @@ export const postMark = async (req, res) => {
 
 export const updateMarkById = async (req, res) => {
     try {
-        const { image, character_id, achievement_id } = req.body;
+        const { image, achievement_id } = req.body;
         const markId = req.params.id;
 
         if(!image && !character_id && !achievement_id){
@@ -51,10 +50,6 @@ export const updateMarkById = async (req, res) => {
 
         if(image){
             markToUpdate.image = image;
-        }
-
-        if(character_id){
-            markToUpdate.character_id = character_id;
         }
 
         if(achievement_id){
