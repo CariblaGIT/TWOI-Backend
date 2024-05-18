@@ -29,7 +29,7 @@ export const seederDefaultItems = async () => {
                 description: "Gives Isaac an extra life. Upon death, he will respawn in the previous room with full health, after which 1up! will disappear",
                 type: "pasive",
                 image: "1up.png",
-                _id: new mongoose.Types.ObjectId("6634aa90e5fc477b76acb858")
+                _id: new mongoose.Types.ObjectId("6634aa90e5fc477b76acb859")
             },
             {
                 name: "20-20",
@@ -37,7 +37,7 @@ export const seederDefaultItems = async () => {
                 description: "Isaac fires two tears at once, one from each eye and 0.8x damage multiplier",
                 type: "pasive",
                 image: "20-20.png",
-                _id: new mongoose.Types.ObjectId("6634aa90e5fc477b76acb859")
+                _id: new mongoose.Types.ObjectId("6634aa90e5fc477b76acb85a")
             },
             {
                 name: "3 Dollar Bill",
@@ -45,7 +45,7 @@ export const seederDefaultItems = async () => {
                 description: "Gives Isaac a random tear effect every few seconds",
                 type: "pasive",
                 image: "3dollarbill.png",
-                _id: new mongoose.Types.ObjectId("6634aa90e5fc477b76acb85a")
+                _id: new mongoose.Types.ObjectId("6634aa90e5fc477b76acb85b")
             },
             {
                 name: "A Dollar",
@@ -53,7 +53,7 @@ export const seederDefaultItems = async () => {
                 description: "Gives Isaac 100 pennies",
                 type: "pasive",
                 image: "adollar.png",
-                _id: new mongoose.Types.ObjectId("6634aa90e5fc477b76acb85b")
+                _id: new mongoose.Types.ObjectId("6634aa90e5fc477b76acb85c")
             },
             {
                 name: "9 Volt",
@@ -61,7 +61,7 @@ export const seederDefaultItems = async () => {
                 description: "Reduces the charge of any activated item by 1. Any 1 charge items instead have timed recharges",
                 type: "pasive",
                 image: "9volt.png",
-                _id: new mongoose.Types.ObjectId("6634aa90e5fc477b76acb85c")
+                _id: new mongoose.Types.ObjectId("6634aa90e5fc477b76acb85d")
             },
             {
                 name: "Lump of Coal",
@@ -69,7 +69,7 @@ export const seederDefaultItems = async () => {
                 description: "The more distance tears travel, the more damage they will do",
                 type: "pasive",
                 image: "lumpofcoal.png",
-                _id: new mongoose.Types.ObjectId("6634aa90e5fc477b76acb85d")
+                _id: new mongoose.Types.ObjectId("6634aa90e5fc477b76acb85e")
             },
             {
                 name: "A Quarter",
@@ -77,7 +77,7 @@ export const seederDefaultItems = async () => {
                 description: "Gives Isaac 25 pennies",
                 type: "pasive",
                 image: "aquarter.png",
-                _id: new mongoose.Types.ObjectId("6634aa90e5fc477b76acb85e")
+                _id: new mongoose.Types.ObjectId("6634aa90e5fc477b76acb85f")
             },
             {
                 name: "A Snack",
@@ -85,7 +85,7 @@ export const seederDefaultItems = async () => {
                 description: "Grants one full Red Heart container and heals 1 additional Red Heart",
                 type: "pasive",
                 image: "asnack.png",
-                _id: new mongoose.Types.ObjectId("6634aa90e5fc477b76acb85f")
+                _id: new mongoose.Types.ObjectId("6634aa90e5fc477b76acb860")
             },
             {
                 name: "Abbadon",
@@ -93,7 +93,7 @@ export const seederDefaultItems = async () => {
                 description: "+1.5 damage and +0.2 speed. Grants 2 Black Hearts, converts all Red Heart Containers into Black Hearts, and adds a chance to shoot fear tears",
                 type: "pasive",
                 image: "abbadon.png",
-                _id: new mongoose.Types.ObjectId("6634aa90e5fc477b76acb860")
+                _id: new mongoose.Types.ObjectId("6634aa90e5fc477b76acb861")
             },
             {
                 name: "Abel",
@@ -101,7 +101,7 @@ export const seederDefaultItems = async () => {
                 description: "Spawns a familiar that mirrors Isaac's movements and shoots towards him",
                 type: "pasive",
                 image: "abel.png",
-                _id: new mongoose.Types.ObjectId("6634aa90e5fc477b76acb861")
+                _id: new mongoose.Types.ObjectId("6634aa90e5fc477b76acb862")
             },
             {
                 name: "Anemic",
@@ -109,7 +109,7 @@ export const seederDefaultItems = async () => {
                 description: "After Isaac is damaged, a trail of red creep will be left behind him until he leaves the current room. +1.5 range",
                 type: "pasive",
                 image: "anemic.png",
-                _id: new mongoose.Types.ObjectId("6634aa90e5fc477b76acb862")
+                _id: new mongoose.Types.ObjectId("6634aa90e5fc477b76acb863")
             },
             {
                 name: "Ankh",
@@ -117,7 +117,7 @@ export const seederDefaultItems = async () => {
                 description: "Upon death, Isaac will respawn as ??? in the previous room, with 3 Soul Hearts",
                 type: "pasive",
                 image: "ankh.png",
-                _id: new mongoose.Types.ObjectId("6634aa90e5fc477b76acb863")
+                _id: new mongoose.Types.ObjectId("6634aa90e5fc477b76acb864")
             },
             {
                 name: "Anti-Gravity",
@@ -125,7 +125,7 @@ export const seederDefaultItems = async () => {
                 description: "Tears float in position until firing ceases, after which they will fly off in the direction they were shot in. +1 Fire Rate",
                 type: "pasive",
                 image: "anti-gravity.png",
-                _id: new mongoose.Types.ObjectId("6634aa90e5fc477b76acb864")
+                _id: new mongoose.Types.ObjectId("6634aa90e5fc477b76acb865")
             },
             {
                 name: "Aquarius",
@@ -133,7 +133,7 @@ export const seederDefaultItems = async () => {
                 description: "A trail of blue creep is left behind Isaac, which damages enemies. The creep inherits most of Isaacs tear effects, like homing",
                 type: "pasive",
                 image: "aquarius.png",
-                _id: new mongoose.Types.ObjectId("6634aa90e5fc477b76acb865")
+                _id: new mongoose.Types.ObjectId("6634aa90e5fc477b76acb866")
             },
             {
                 name: "Aries",
@@ -141,7 +141,7 @@ export const seederDefaultItems = async () => {
                 description: "+0.25 Speed. Running into enemies while at a high speed will deal damage, and also prevents Isaac from taking contact damage while moving at high speed",
                 type: "pasive",
                 image: "aries.png",
-                _id: new mongoose.Types.ObjectId("6634aa90e5fc477b76acb866")
+                _id: new mongoose.Types.ObjectId("6634aa90e5fc477b76acb867")
             },
             {
                 name: "A Pony",
@@ -149,7 +149,7 @@ export const seederDefaultItems = async () => {
                 description: "Passively grants flight and increases speed to 1.5. Upon use, Isaac charges in the direction the pony is facing, giving invulnerability during the charge and dealing damage to enemies hit",
                 type: "active",
                 image: "apony.png",
-                _id: new mongoose.Types.ObjectId("6634aa90e5fc477b76acb867")
+                _id: new mongoose.Types.ObjectId("6634aa90e5fc477b76acb868")
             },
             {
                 name: "Anarchist Cookbook",
@@ -157,7 +157,7 @@ export const seederDefaultItems = async () => {
                 description: "Spawns six Troll Bombs around the room",
                 type: "active",
                 image: "anarchistcookbook.png",
-                _id: new mongoose.Types.ObjectId("6634aa90e5fc477b76acb868")
+                _id: new mongoose.Types.ObjectId("6634aa90e5fc477b76acb8af")
             }
 		]);
 		console.log("Default items created");
