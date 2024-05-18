@@ -14,7 +14,7 @@ const PickupSchema = new Schema(
             type: String,
             enum: ["card", "heart", "trinket", "coin", "bomb", "key", "battery", "pill", "rune", "sack"]
         },
-        icon: {
+        image: {
             type: String,
             unique: true
         }

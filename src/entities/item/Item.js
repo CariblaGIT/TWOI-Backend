@@ -17,7 +17,7 @@ const ItemSchema = new Schema(
             type: String,
             enum: ["active", "pasive"]
         },
-        icon: {
+        image: {
             type: String,
             unique: true
         }
