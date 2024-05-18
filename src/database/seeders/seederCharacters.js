@@ -33,7 +33,7 @@ export const seederDefaultCharacters = async () => {
             },
             {
                 name: "???",
-				image: "questions.png",
+				image: "bluebaby.png",
                 unlock: "Defeating Moms Heart for 10 times using any character/s",
 				_id: new mongoose.Types.ObjectId("6634aa90e5fc477b76acb84b")
             },
@@ -69,7 +69,7 @@ export const seederDefaultCharacters = async () => {
             },
             {
                 name: "The Lost",
-				image: "lost.png",
+				image: "thelost.png",
                 unlock: "Dying in a Sacrifice room holding Missing Poster",
 				_id: new mongoose.Types.ObjectId("6634aa90e5fc477b76acb851")
             },
@@ -93,7 +93,7 @@ export const seederDefaultCharacters = async () => {
             },
             {
                 name: "The Forgotten",
-				image: "forgotten.png",
+				image: "theforgotten.png",
                 unlock: "The Lamb must have been defeated previously before The Forgotten can be unlocked. First, start a new run as any character and defeat the first floor boss within 1 minute, Mom will yell and the sound of running footsteps will play, then a large shadow of a shovel handle will loom over the floor of the starting room. Bombing anywhere in the starting room will spawn the Broken Shovel. Initially the shovel piece behaves like a pickup, laying on the floor, and turns into an active collectible only when touched for the first time. Next, clear Boss Rush to grant the second piece of the Broken Shovel, completing Moms Shovel. Finally, using the shovel in a single Grave Room with a Dirt Patch in its center in the Dark Room, unlocks The Forgotten.",
 				_id: new mongoose.Types.ObjectId("6634aa90e5fc477b76acb855")
             },
