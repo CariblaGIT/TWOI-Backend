@@ -6,12 +6,12 @@ const MarkSchema = new Schema(
             type: String,
             unique: true
         },
-        achievement_id: [{
+        achievement_id: {
             type: String
-        }],
-        character_id: [{
+        },
+        character_id: {
             type: String
-        }]
+        }
     },
     {
         timestamps: true,
