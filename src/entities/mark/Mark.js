@@ -8,6 +8,9 @@ const MarkSchema = new Schema(
         },
         achievement_id: [{
             type: String
+        }],
+        character_id: [{
+            type: String
         }]
     },
     {
