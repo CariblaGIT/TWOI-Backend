@@ -1,6 +1,7 @@
 import User from "./User.js"
 import { verifyEmail } from "../../core/utils/verifyEmail.js"
 import { verifyPassword } from "../../core/utils/verifyPassword.js"
+import Achievement from "../achievement/Achievement.js";
 
 export const getUsers = async (req, res) => {
     try {
