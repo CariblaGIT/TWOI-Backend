@@ -16,9 +16,9 @@ export const getAllItems = async (req, res) => {
 
 export const postItem = async (req, res) => {
     try {
-        const { name, quote, description, type, icon } = req.body;
+        const { name, quote, description, type, image } = req.body;
 
-        if(!name || !quote || !description || !type || !icon){
+        if(!name || !quote || !description || !type || !image){
             throw new Error ("No provided correct data for post a item");
         }
 
@@ -27,7 +27,7 @@ export const postItem = async (req, res) => {
             quote,
             description,
             type,
-            icon
+            image
         });
         
         return res.status(200).json({
