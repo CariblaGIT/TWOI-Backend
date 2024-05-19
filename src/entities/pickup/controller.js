@@ -32,9 +32,9 @@ export const getAllPickupsFromType = async (req, res) => {
 
 export const postPickup = async (req, res) => {
     try {
-        const { name, description, type, icon } = req.body;
+        const { name, description, type, image } = req.body;
 
-        if(!name || !description || !type || !icon){
+        if(!name || !description || !type || !image){
             throw new Error ("No provided correct data for post a pickup");
         }
 
@@ -42,7 +42,7 @@ export const postPickup = async (req, res) => {
             name,
             description,
             type,
-            icon
+            image
         });
         
         return res.status(200).json({

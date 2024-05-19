@@ -2,7 +2,7 @@ import 'dotenv/config';
 import User from '../../entities/user/User.js';
 import bcrypt from "bcrypt";
 import mongoose from "mongoose";
-import { dbConnection } from "../../../db.js"
+import { dbConnection } from "../db.js"
 
 export const seederDefaultUsers = async () => {
     try {
@@ -15,7 +15,7 @@ export const seederDefaultUsers = async () => {
                 role: "admin"
 			},
 			{
-                name: "ElLuchadorBITW",
+                username: "ElLuchadorBITW",
 				email: "caribla4@gmail.com",
 				password: bcrypt.hashSync('superAdmin1234#', 5),
                 role: "super_admin",
@@ -24,13 +24,13 @@ export const seederDefaultUsers = async () => {
                 marks: ["6634aa90e5fc477b76acb8a1", "6634aa90e5fc477b76acb8a2", "6634aa90e5fc477b76acb8a3", "6634aa90e5fc477b76acb8a4", "6634aa90e5fc477b76acb8a5"]
 			},
             {
-                name: "user",
+                username: "user",
                 email: "user@user.com",
 				password: bcrypt.hashSync('User12345#', 5),
                 role: "user"
             },
             {
-                name: "user2",
+                username: "user2",
                 email: "user2@user2.com",
 				password: bcrypt.hashSync('User12345#', 5),
                 role: "user"
