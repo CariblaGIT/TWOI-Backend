@@ -111,9 +111,9 @@ Also, here you will get the data from 4 users that are created by the seeder as 
     },
     {
         "username": "ElLuchadorBITW",
-        "email": "caribla4@gmail.com.com",
+        "email": "caribla4@gmail.com",
         "password": "superAdmin1234#",
-        "role": "admin",
+        "role": "super_admin",
         "characters": ["6634aa90e5fc477b76acb847"],
         "achievements": ["6634aa90e5fc477b76acb893", "6634aa90e5fc477b76acb894", "6634aa90e5fc477b76acb895", "6634aa90e5fc477b76acb896","6634aa90e5fc477b76acb897"],
         "marks": ["6634aa90e5fc477b76acb8a1", "6634aa90e5fc477b76acb8a2", "6634aa90e5fc477b76acb8a3", "6634aa90e5fc477b76acb8a4", "6634aa90e5fc477b76acb8a5"]
