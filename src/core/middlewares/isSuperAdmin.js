@@ -1,7 +1,7 @@
 
 export const verifySuperAdmin = (req, res, next) => {
     try {
-        const userRole = req.tokenData.roleName;
+        const userRole = req.tokenData.role;
 
         if(userRole !== "super_admin"){
             return res.status(401).json({
